@@ -54,6 +54,8 @@ class Project(models.Model):
     project_team = models.TextField(max_length=3000, blank=True, verbose_name='تیم پروژه')
     persian_project_team = models.TextField(max_length=3000, blank=True, verbose_name='تیم پروژه(فارسی)')
 
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name='زمان تولید')
+
     def __str__(self):
         return f"{self.title} - {self.description[:30]} ..."
 
