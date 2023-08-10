@@ -15,6 +15,7 @@ class Category(models.Model):
 
 
 class Project(models.Model):
+    cover_image = models.ImageField(upload_to='images/project_images', verbose_name='عکس کاور', default=None)
     category = models.ManyToManyField(Category, verbose_name='دسته بندی')
     title = models.CharField(max_length=300, verbose_name='عنوان')
     persian_title = models.CharField(max_length=200, verbose_name='عنوان (فارسی)')
@@ -63,3 +64,7 @@ class Project(models.Model):
         verbose_name = 'پروژه'
         verbose_name_plural = 'پروژه ها'
 
+
+class Image(models.Model):
+    project = models.ForeignKey(Project, default=None, on_delete=models.CASCADE, related_name='images')
+    image = models.ImageField(upload_to='images/project_images')
