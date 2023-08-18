@@ -19,6 +19,8 @@ class Content(models.Model):
         return f'{self.title} - {self.description[:30]}...'
 
     class Meta:
+        verbose_name = 'محتوا'
+        verbose_name_plural = 'محتوا'
         ordering = ('-created_at',)
 
 
