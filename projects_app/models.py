@@ -26,12 +26,25 @@ class Image(models.Model):
         verbose_name_plural = 'عکس های پروژه ها'
 
 
+BaseCategory = (
+    ('s', 'structure'),
+    ('i', 'interior'),
+    ('e', 'exterior'),
+    ('o', 'object'),
+)
+
+
 class Project(models.Model):
+    base_category = models.CharField(max_length=1, choices=BaseCategory, default='s', verbose_name="نوع پروژه")
+
     cover_image = models.ImageField(upload_to='images/project_images', verbose_name='عکس کاور', default=None)
     images = models.ForeignKey(Image, verbose_name='عکس های پروژه', related_name='images', on_delete=models.CASCADE, default=None)
+
     category = models.ManyToManyField(Category, verbose_name='دسته بندی', related_name='categories')
+
     title = models.CharField(max_length=300, verbose_name='عنوان')
     persian_title = models.CharField(max_length=200, verbose_name='عنوان (فارسی)')
+
     description = models.CharField(max_length=1500, verbose_name='توضیحات')
     persian_description = models.CharField(max_length=1500, verbose_name='توضیحات (فارسی)')
 
