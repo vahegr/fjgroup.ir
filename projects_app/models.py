@@ -51,32 +51,11 @@ class Project(models.Model):
     location = models.CharField(max_length=300, blank=True, verbose_name='مکان')
     persian_location = models.CharField(max_length=300, blank=True, verbose_name='مکان(فارسی)')
 
-    builder = models.CharField(max_length=300, blank=True, verbose_name='سازنده')
-    persian_builder = models.CharField(max_length=300, blank=True, verbose_name='سازنده(فارسی)')
+    planning = models.CharField(max_length=300, blank=True, verbose_name='برنامه ریزی')
+    persian_planning = models.CharField(max_length=300, blank=True, verbose_name='برنامه ریزی(فارسی)')
 
-    project_management = models.CharField(max_length=300, blank=True, verbose_name='مدیریت پروژه')
-    persian_project_management = models.CharField(max_length=300, blank=True, verbose_name='مدیریت پروژه(فارسی)')
-
-    competition = models.CharField(max_length=300, blank=True, verbose_name='رقابت')
-    persian_competition = models.CharField(max_length=300, blank=True, verbose_name='رقابت(فارسی)')
-
-    ranking = models.CharField(max_length=300, blank=True, verbose_name='رتبه بندی')
-    persian_ranking = models.CharField(max_length=300, blank=True, verbose_name='رتبه بندی(فارسی)')
-
-    planing = models.CharField(max_length=300, blank=True, verbose_name='تاریخ برنامه ریزی')
-    persian_planing = models.CharField(max_length=300, blank=True, verbose_name='تاریخ برنامه ریزی(فارسی)')
-
-    start_of_construction = models.CharField(max_length=300, blank=True, verbose_name='شروع ساخت و ساز')
-    persian_start_of_construction = models.CharField(max_length=300, blank=True, verbose_name='شروع ساخت و ساز(فارسی)')
-
-    completion = models.CharField(max_length=300, blank=True, verbose_name='تاریخ تکمیل')
-    persian_completion = models.CharField(max_length=300, blank=True, verbose_name='تاریخ تکمیل(فارسی)')
-
-    gross_floor_area = models.CharField(max_length=300, blank=True, verbose_name='مساحت طبقه ناخالص')
-    persian_gross_floor_area = models.CharField(max_length=300, blank=True, verbose_name='مساحت طبقه ناخالص(فارسی)')
-
-    # images_copyright = models.CharField(max_length=300, blank=True, verbose_name='')
-    # persian_images_copyright = models.CharField(max_length=300, blank=True, verbose_name='')
+    engineer = models.CharField(max_length=300, blank=True, verbose_name='مهندس')
+    persian_engineer = models.CharField(max_length=300, blank=True, verbose_name='مهندس(فارسی)')
 
     project_team = models.TextField(max_length=3000, blank=True, verbose_name='تیم پروژه')
     persian_project_team = models.TextField(max_length=3000, blank=True, verbose_name='تیم پروژه(فارسی)')
