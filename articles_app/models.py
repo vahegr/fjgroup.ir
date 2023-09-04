@@ -21,7 +21,5 @@ class Article(models.Model):
 
     class Meta:
         ordering = ('-created_time',)
-
-    class Meta:
         verbose_name = 'مقاله'
         verbose_name_plural = 'مقالات'
