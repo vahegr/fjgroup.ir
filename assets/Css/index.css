@@ -1,0 +1,90 @@
+@font-face {
+    src: url("../Fonts/AvenirNext/AvenirNextLTPro-Regular.otf");
+    font-family: "AvenirNext";
+}
+
+@font-face {
+    font-family: "iransans";
+    src: url("../Fonts/teqh_iransansweb.ttf");
+}
+
+* {
+    font-family: "AvenirNext";
+    letter-spacing: 1px;
+}
+
+body {
+    background-color: #F6F6F6;
+    overflow-x: hidden;
+}
+
+.FA {
+    font-family: "iransans";
+}
+
+
+/* start header */
+
+ul {
+    border-radius: 0 !important;
+}
+
+nav {
+    background-color: #FFFA82;
+    width: 85%;
+}
+
+.headerimage {
+    background-size: cover;
+}
+
+#lang {
+    cursor: pointer;
+}
+
+.brand-text {
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.brand {
+    letter-spacing: 3px;
+}
+
+.navitem:active {
+    border-bottom: 1px solid black !important;
+    bottom: 1px !important;
+    transition: all 0.4s ease !important;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+/* end header */
+
+button {
+    border-radius: 0 !important;
+}
+
+
+/* start footer */
+
+.footer-part-1 {
+    background-color: #FFFA82;
+}
+
+.footer-part-2 {
+    background-color: #F9F07D;
+}
+
+.col-md-2 {
+    line-height: 35px;
+}
+
+
+/* end footer */

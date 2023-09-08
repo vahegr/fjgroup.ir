@@ -1,0 +1,54 @@
+@font-face {
+    font-family: "AvenirNext";
+    src: url(../Fonts/AvenirNext/AvenirNextLTPro-Regular.otf);
+}
+
+@font-face {
+    font-family: "AJensonPro";
+    src: url(../Fonts/AJensonPro-Regular.otf);
+}
+
+@font-face {
+    font-family: "iransansweb";
+    src: url(../Fonts/teqh_iransansweb.ttf);
+}
+
+* {
+    font-family: "AvenirNext";
+    letter-spacing: 1px;
+}
+
+body {
+    background-color: #F6F6F6;
+}
+
+.text-secondary {
+    font-family: "AJensonPro";
+}
+
+.FA {
+    font-family: "iransansweb";
+}
+
+.area {
+    padding-right: 250px;
+    transition: all 0.3s linear;
+}
+
+.area:hover {
+    background-color: #F9F07D;
+    transition: all 0.3s linear;
+}
+
+.navitem:active {
+    border-bottom: 1px solid black !important;
+    bottom: 1px !important;
+    transition: all 0.4s ease !important;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}

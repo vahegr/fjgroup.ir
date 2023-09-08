@@ -1,0 +1,141 @@
+@font-face {
+    src: url("../Fonts/AJensonPro-Regular.otf");
+    font-family: "AJensonPro";
+}
+
+@font-face {
+    src: url("../Fonts/AvenirNext/AvenirNextLTPro-Regular.otf");
+    font-family: "AvenirNext";
+}
+
+@font-face {
+    font-family: "iransans";
+    src: url("../Fonts/teqh_iransansweb.ttf");
+}
+
+body {
+    background-color: #F6F6F6 !important;
+}
+
+* {
+    font-family: "AvenirNext";
+    letter-spacing: 1px;
+}
+
+.FA {
+    font-family: "iransans";
+}
+
+.AJensonPro {
+    font-family: "AJensonPro";
+}
+
+.text {
+    background-color: #B3B2B2 !important;
+}
+
+.red {
+    background-color: #E50846 !important;
+}
+
+.purple {
+    background-color: #C70B80 !important;
+}
+
+.blue {
+    background-color: #26435F !important;
+}
+
+.brown {
+    background-color: #5D514D !important;
+}
+
+.yellow {
+    background-color: #FEFA81 !important;
+}
+
+button {
+    border-radius: 0 !important;
+}
+
+.headertext {
+    width: 65%;
+}
+
+.box {
+    width: 40%;
+}
+
+
+/* start accordion */
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.6s;
+}
+
+.active,
+.accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease-out;
+}
+
+
+/* end accordion */
+
+
+/* start header */
+
+.brand-text {
+    font-weight: 900;
+}
+
+.brand {
+    margin-left: 267px;
+}
+
+.navitem:active {
+    border-bottom: 1px solid black !important;
+    bottom: 1px !important;
+    transition: all 0.4s ease !important;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+/* end header */
+
+#ContactUs {
+    margin-left: 26px;
+}
+
+.purplebox {
+    margin-bottom: 107px;
+}
+
+.browntext {
+    margin-top: -106px;
+}
+
+#lang {
+    cursor: pointer;
+}
