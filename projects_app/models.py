@@ -66,6 +66,7 @@ class Project(models.Model):
         return f"{self.title} - {self.description[:30]} ..."
 
     class Meta:
+        ordering = ('-created_at',)
         verbose_name = 'پروژه'
         verbose_name_plural = 'پروژه ها'
 
