@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block description %}
+{#description#}
+{% endblock %}
+{% block title %}
+    Fj Group | صفحه ی اصلی
+{% endblock %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'Css/index.css' %}">
+{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+{% block content %}
+    {% include 'includes/header1.html' %}
+    <main class="mt-5 mb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                {% for project in projects %}
+                <div class="col-md-5 col-sm-12 text-center mb-5">
+                    <a href="" class="text-decoration-none text-dark">
+                        <img src="{{ project.cover_image.url }}" class="img-fluid mb-2" alt="{{ project.title }}">
+                        <h4 class="mt-5 EN">{{ project.title }}</h4>
+                        <h4 class="mt-5 FA">{{ project.persian_title }}</h4>
+                        <button class="btn btn-outline-dark mt-3 EN mx-auto">{{ project.category.first.title }}</button>
+                        <button class="btn btn-outline-dark mt-3 FA mx-auto">{{ project.category.first.persian_title }}</button>
+                    </a>
+                </div>
+                {% endfor %}
+
+
+            </div>
+
+        </div>
+    </main>
+{%  endblock %}
+</body>
+
+</html>
