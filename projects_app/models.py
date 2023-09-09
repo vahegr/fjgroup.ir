@@ -1,4 +1,7 @@
 from django.db import models
+from django.urls import reverse
+from unidecode import unidecode
+from django.template import defaultfilters
 
 
 class Category(models.Model):
@@ -35,6 +38,7 @@ BaseCategory = (
 
 
 class Project(models.Model):
+    slug = models.SlugField(unique=True, allow_unicode=True, blank=True, null=True)
     base_category = models.CharField(max_length=1, choices=BaseCategory, default='s', verbose_name="نوع پروژه")
 
     cover_image = models.ImageField(upload_to='images/project_images', verbose_name='عکس کاور', default=None)
@@ -69,5 +73,13 @@ class Project(models.Model):
         ordering = ('-created_at',)
         verbose_name = 'پروژه'
         verbose_name_plural = 'پروژه ها'
+
+    def get_absolute_url(self):
+        return reverse('articles:article_detail', args=[self.id, self.slug])
+
+    def save(self, force_insert=False, force_update=False, using=None, update_fields=None):
+        if not self.title == "":
+            self.slug = defaultfilters.slugify(unidecode(self.title))
+        super(Project, self).save()
 
 
