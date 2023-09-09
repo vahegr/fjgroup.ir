@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block description %}
+{#description#}
+{% endblock %}
+{% block title %}
+    Fj Group | پروژه ها
+{% endblock %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'Css/Interior.css' %}">
+    <link rel="stylesheet" href="{% static 'Css/Project.css' %}">
+{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<body>
+{% block content %}
+    {% include 'includes/header2.html' %}
+    <main>
+        <div class="container">
+            <div class="row mt-5 mb-5">
+                <ul class="list-group list-group-horizontal flex-wrap container-fluid">
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType1 text-dark EN text-nowrap">Office<i class="bi bi-x h5 xicon1 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType1 text-dark FA text-nowrap">دفتر<i class="bi bi-x h5 xicon1 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType2 text-dark EN text-nowrap">Residential <i class="bi bi-x h5 xicon2 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType2 text-dark FA text-nowrap">مسکونی <i class="bi bi-x h5 xicon2 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType3 text-dark EN text-nowrap">Hotel <i class="bi bi-x h5 xicon3 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType3 text-dark FA text-nowrap">هتل <i class="bi bi-x h5 xicon3 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType4 text-dark EN text-nowrap">Retail <i class="bi bi-x h5 xicon4 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType4 text-dark FA text-nowrap">خرده فروشی <i class="bi bi-x h5 xicon4 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType5 text-dark EN text-nowrap">Corporate <i class="bi bi-x h5 xicon5 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType5 text-dark FA text-nowrap">شرکت بزرگ <i class="bi bi-x h5 xicon5 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType6 text-dark EN text-nowrap">Exhibition <i class="bi bi-x h5 xicon6 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType6 text-dark FA text-nowrap">نمایشگاه <i class="bi bi-x h5 xicon6 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType7 text-dark EN text-nowrap">Education <i class="bi bi-x h5 xicon7 hidden "></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType7 text-dark FA text-nowrap">تحصیلات <i class="bi bi-x h5 xicon7 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType8 text-dark EN text-nowrap">Public <i class="bi bi-x h5 xicon8 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType8 text-dark FA text-nowrap">عمومی <i class="bi bi-x h5 xicon8 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType9 text-dark EN text-nowrap">Green <i class="bi bi-x h5 xicon9 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType9 text-dark FA text-nowrap">سبز <i class="bi-x h5 xicon9 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType10 text-dark EN text-nowrap">High Rise <i class="bi bi-x h5 xicon10 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType10 text-dark FA text-nowrap">بلند مرتبه <i class="bi bi-x h5 xicon10 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType11 text-dark EN text-nowrap">Transportation <i class="bi bi-x h5 xicon11 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType11 text-dark FA text-nowrap">حمل و نقل <i class="bi bi-x h5 xicon11 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType12 text-dark EN text-nowrap">Living Bridge <i class="bi bi-x h5 xicon12 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType12 text-dark FA text-nowrap">پل زندگی <i class="bi bi-x h5 xicon12 hidden"></i></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row mt-5">
+                {% for project in projects %}
+                <div class="col-md-4 col-sm-12 mb-4">
+                    <a href="{{ project.get_absolute_url }}"><img src="{{ project.cover_image.url }}" alt="project image" class="img-fluid mb-3"></a>
+                    <span class="AJensonPro mt-3">{{ project.title }}</span><br>
+                    <span class="d-inline-block mt-1">{{ project.location }}</span>
+                    <span class="d-inline-block AJensonPro">{{ project.planning }}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </main>
+{% endblock %}
+</body>
+
+</html>

@@ -38,11 +38,11 @@ BaseCategory = (
 
 
 class Project(models.Model):
-    slug = models.SlugField(unique=True, allow_unicode=True, blank=True, null=True)
+    slug = models.SlugField(allow_unicode=True, blank=True, null=True)
     base_category = models.CharField(max_length=1, choices=BaseCategory, default='s', verbose_name="نوع پروژه")
 
     cover_image = models.ImageField(upload_to='images/project_images', verbose_name='عکس کاور', default=None)
-    images = models.ForeignKey(Image, verbose_name='عکس های پروژه', related_name='images', on_delete=models.CASCADE, default=None)
+    images = models.ManyToManyField(Image, verbose_name='عکس های پروژه', default=None)
 
     category = models.ManyToManyField(Category, verbose_name='دسته بندی', related_name='categories')
 
@@ -75,7 +75,7 @@ class Project(models.Model):
         verbose_name_plural = 'پروژه ها'
 
     def get_absolute_url(self):
-        return reverse('articles:article_detail', args=[self.id, self.slug])
+        return reverse('projects_app:project_detail', args=[self.id, self.slug])
 
     def save(self, force_insert=False, force_update=False, using=None, update_fields=None):
         if not self.title == "":
