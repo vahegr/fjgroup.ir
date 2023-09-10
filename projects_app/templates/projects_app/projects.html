@@ -22,7 +22,6 @@
             <div class="row mt-5 mb-5">
                 <input type="search" class="form-control col-md-6 border-0 mt-3 mb-4" placeholder="Search">
                 <ul class="list-group list-group-horizontal flex-wrap container-fluid">
-<<<<<<< HEAD
                     <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType1 text-dark EN text-nowrap" data-filter="office">Office<i class="bi bi-x h5 xicon1 hidden"></i></li>
                     <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType1 text-dark FA text-nowrap" data-filter="office">دفتر<i class="bi bi-x h5 xicon1 hidden"></i></li>
                     <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType2 text-dark EN text-nowrap" data-filter="residential">Residential <i class="bi bi-x h5 xicon2 hidden"></i></li>
@@ -47,12 +46,6 @@
                     <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType11 text-dark FA text-nowrap" data-filter="transportation">حمل و نقل <i class="bi bi-x h5 xicon11 hidden"></i></li>
                     <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType12 text-dark EN text-nowrap" data-filter="living bridge">Living Bridge <i class="bi bi-x h5 xicon12 hidden"></i></li>
                     <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType12 text-dark FA text-nowrap" data-filter="living bridge">پل زندگی <i class="bi bi-x h5 xicon12 hidden"></i></li>
-=======
-                    {% for cat in categories %}
-                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType {{ cat.project_type }} text-dark EN text-nowrap" data-filter="{{ cat.title }}">{{ cat.title }}<i class="bi bi-x h5 xicon1 hidden"></i></li>
-                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType {{ cat.project_type }} text-dark FA text-nowrap" data-filter="{{ cat.title }}">{{ cat.persian_title }}<i class="bi bi-x h5 xicon1 hidden"></i></li>
-                    {% endfor %}
->>>>>>> 13c1bf02efd2931ebf3bd300e78726c0d9635d5b
                 </ul>
             </div>
         </div>
@@ -60,11 +53,7 @@
         <div class="container">
             <div class="row mt-5">
                 {% for project in projects %}
-<<<<<<< HEAD
                 <div class="col-md-4 col-sm-12 mb-4 {{ project.category.first.title }}">
-=======
-                <div class="col-md-4 col-sm-12 mb-4" {{ project.category.all }}>
->>>>>>> 13c1bf02efd2931ebf3bd300e78726c0d9635d5b
                     <a href="{{ project.get_absolute_url }}"><img src="{{ project.cover_image.url }}" alt="project image" class="img-fluid mb-3"></a>
                     <span class="AJensonPro mt-3">{{ project.title }}</span><br>
                     <span class="d-inline-block mt-1">{{ project.location }}</span>
