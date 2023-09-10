@@ -22,10 +22,30 @@
             <div class="row mt-5 mb-5">
                 <input type="search" class="form-control col-md-6 border-0 mt-3 mb-4" placeholder="Search">
                 <ul class="list-group list-group-horizontal flex-wrap container-fluid">
-                    {% for cat in categories %}
-                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType {{ cat.project_type }} text-dark EN text-nowrap" data-filter="{{ cat.title }}">{{ cat.title }}<i class="bi bi-x h5 xicon1 hidden"></i></li>
-                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType {{ cat.project_type }} text-dark FA text-nowrap" data-filter="{{ cat.title }}">{{ cat.persian_title }}<i class="bi bi-x h5 xicon1 hidden"></i></li>
-                    {% endfor %}
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType1 text-dark EN text-nowrap" data-filter="office">Office<i class="bi bi-x h5 xicon1 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType1 text-dark FA text-nowrap" data-filter="office">دفتر<i class="bi bi-x h5 xicon1 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType2 text-dark EN text-nowrap" data-filter="residential">Residential <i class="bi bi-x h5 xicon2 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType2 text-dark FA text-nowrap" data-filter="residential">مسکونی <i class="bi bi-x h5 xicon2 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType3 text-dark EN text-nowrap" data-filter="hotel">Hotel <i class="bi bi-x h5 xicon3 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType3 text-dark FA text-nowrap" data-filter="hotel">هتل <i class="bi bi-x h5 xicon3 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType4 text-dark EN text-nowrap" data-filter="retail">Retail <i class="bi bi-x h5 xicon4 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType4 text-dark FA text-nowrap" data-filter="retail">خرده فروشی <i class="bi bi-x h5 xicon4 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType5 text-dark EN text-nowrap" data-filter="corporate">Corporate <i class="bi bi-x h5 xicon5 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType5 text-dark FA text-nowrap" data-filter="corporate">شرکت بزرگ <i class="bi bi-x h5 xicon5 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType6 text-dark EN text-nowrap" data-filter="exhibition">Exhibition <i class="bi bi-x h5 xicon6 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType6 text-dark FA text-nowrap" data-filter="exhibition">نمایشگاه <i class="bi bi-x h5 xicon6 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType7 text-dark EN text-nowrap" data-filter="education">Education <i class="bi bi-x h5 xicon7 hidden "></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType7 text-dark FA text-nowrap" data-filter="education">تحصیلات <i class="bi bi-x h5 xicon7 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType8 text-dark EN text-nowrap" data-filter="public">Public <i class="bi bi-x h5 xicon8 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType8 text-dark FA text-nowrap" data-filter="public">عمومی <i class="bi bi-x h5 xicon8 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType9 text-dark EN text-nowrap" data-filter="green">Green <i class="bi bi-x h5 xicon9 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType9 text-dark FA text-nowrap" data-filter="green">سبز <i class="bi-x h5 xicon9 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType10 text-dark EN text-nowrap" data-filter="high rise">High Rise <i class="bi bi-x h5 xicon10 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType10 text-dark FA text-nowrap" data-filter="high rise">بلند مرتبه <i class="bi bi-x h5 xicon10 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType11 text-dark EN text-nowrap" data-filter="transportation">Transportation <i class="bi bi-x h5 xicon11 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType11 text-dark FA text-nowrap" data-filter="transportation">حمل و نقل <i class="bi bi-x h5 xicon11 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType12 text-dark EN text-nowrap" data-filter="living bridge">Living Bridge <i class="bi bi-x h5 xicon12 hidden"></i></li>
+                    <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType12 text-dark FA text-nowrap" data-filter="living bridge">پل زندگی <i class="bi bi-x h5 xicon12 hidden"></i></li>
                 </ul>
             </div>
         </div>
@@ -33,7 +53,7 @@
         <div class="container">
             <div class="row mt-5">
                 {% for project in projects %}
-                <div class="col-md-4 col-sm-12 mb-4" {{ project.category.all }}>
+                <div class="col-md-4 col-sm-12 mb-4 {{ project.category.first.title }}">
                     <a href="{{ project.get_absolute_url }}"><img src="{{ project.cover_image.url }}" alt="project image" class="img-fluid mb-3"></a>
                     <span class="AJensonPro mt-3">{{ project.title }}</span><br>
                     <span class="d-inline-block mt-1">{{ project.location }}</span>
