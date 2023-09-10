@@ -33,5 +33,5 @@ def project_detail(request, id, slug):
 
 def search_result(request):
     q = request.GET.get('q')
-    projects = Project.objects.filter(title__icontains=q)
+    projects = Project.objects.filter(title__icontains=q, category__title__icontains=q)
     return render(request, 'projects_app/projects.html', context={'projects': projects})
