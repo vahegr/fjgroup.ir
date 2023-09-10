@@ -20,7 +20,9 @@
     <main>
         <div class="container">
             <div class="row mt-5 mb-5">
-                <input type="search" class="form-control col-md-6 border-0 mt-3 mb-4" placeholder="Search">
+                <form method="get" action="{% url 'projects_app:search_result' %}">
+                    <input type="search" name="q" class="form-control col-md-6 border-0 mt-3 mb-4" placeholder="Search">
+                </form>
                 <ul class="list-group list-group-horizontal flex-wrap container-fluid">
                     <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType1 text-dark EN text-nowrap" data-filter="office">Office<i class="bi bi-x h5 xicon1 hidden"></i></li>
                     <li class="list-group-item btn btn-outline-dark mx-1 mb-2 px-2 projectType projectType1 text-dark FA text-nowrap" data-filter="office">دفتر<i class="bi bi-x h5 xicon1 hidden"></i></li>

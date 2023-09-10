@@ -29,3 +29,9 @@ def objects_projects_view(request):
 def project_detail(request, id, slug):
     project = Project.objects.get(id=id, slug=slug)
     return render(request, 'projects_app/Project_detail.html', context={'project': project})
+
+
+def search_result(request):
+    q = request.GET.get('q')
+    projects = Project.objects.filter(title__icontains=q)
+    return render(request, 'projects_app/projects.html', context={'projects': projects})

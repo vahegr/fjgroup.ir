@@ -9,4 +9,5 @@ urlpatterns = [
     path('exterior', views.exterior_projects_view, name='exterior'),
     path('objects', views.objects_projects_view, name='objects'),
     path('project_detail/<int:id>/<slug:slug>', views.project_detail, name='project_detail'),
+    path('search', views.search_result, name='search_result'),
 ]
