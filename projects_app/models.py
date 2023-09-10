@@ -7,6 +7,7 @@ from django.template import defaultfilters
 class Category(models.Model):
     title = models.CharField(max_length=200, verbose_name='عنوان')
     persian_title = models.CharField(max_length=200, verbose_name='عنوان فارسی')
+    project_type = models.CharField(max_length=100, verbose_name='تایپ پروژه(برای توسعه دهندگان)', default='projectType')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='زمان تولید')
 
     def __str__(self):
