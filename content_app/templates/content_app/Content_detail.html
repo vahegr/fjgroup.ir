@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block description %}
+{#description#}
+{% endblock %}
+{% block title %}
+    Fj Group | {{ content.title }}
+{% endblock %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'Css/Project.css' %}">
+    <link rel="stylesheet" href="{% static 'Css/Contentdetail.css' %}">
+{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<body>
+    {% block content %}
+        {% include 'includes/header2.html' %}
+    <main>
+        <div class="container w-75 mt-5">
+            <div class="text-center">
+                <a href="" class="text-dark"><i class="bi bi-x"></i></a>
+            </div>
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner mx-auto">
+                    {% if content.image %}
+                    <div class="carousel-item active">
+                        <img src="{{ content.image.url }}" class="d-block w-100 img-fluid" alt="{{ content.title }}">
+                    </div>
+                    {% else %}
+                        <div class="carousel-item active">
+                            <video>
+                                <source src="{{ content.video.url }}" type="video/mp4">
+                            </video>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <h2 class="mt-4">{{ content.title }} </h2>
+
+            <p class="mt-5 mb-3 w-75 lh-lg">{{ content.description }}</p>
+
+            <p class="text-secondary AJensonPro mt-3">{{ content.created_at.day }} - {{ content.created_at.month }} - {{ content.created_at.year }}</p>
+
+        </div>
+
+    </main>
+{% endblock %}
+</body>
+
+
+</html>

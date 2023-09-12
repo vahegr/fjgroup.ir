@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block description %}
+{#description#}
+{% endblock %}
+{% block title %}
+    Fj Group | محتوا
+{% endblock %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'Css/Content.css' %}">
+    <link rel="stylesheet" href="{% static 'Css/Interior.css' %}">
+    <link rel="stylesheet" href="{% static 'Css/Project.css' %}">
+{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<body>
+{% block content %}
+{% include 'includes/header2.html' %}
+    <main>
+    {% for content in content %}
+        <div class="area pt-5 pb-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-5 col-sm-12 col-12 text-end">
+                        <img src="{{ article.image.url }}" alt="{{ article.title }}" class="img-fluid w-50 mb-2">
+                        <img src="{{ article.second_image.url }}" alt="{{ article.title }}" class="img-fluid w-50">
+                    </div>
+
+                    <div class="col-md-5 col-sm-12 col-12">
+                        <h2 class="w-75 lh-base EN">{{ article.title}}</h2>
+                        <h2 class="w-75 lh-base FA">{{ article.persian_title }}</h2>
+                        <h4 class="text-secondary mb-4 EN">{{ article.created_time.day }},{{ article.created_time.month }},{{ article.created_time.year }}</h4>
+                        <h4 class="text-secondary mb-4 FA">{{ article.created_time.day }},{{ article.created_time.month }},{{ article.created_time.year }}</h4>
+                        <p class="w-75 lh-lg EN">{{ article.description }}</p>
+                        <p class="w-75 lh-lg FA">{{ article.persian_description }}</p>
+                        <a href="{% url 'article_app:article_download' article.id %}" class="text-dark EN">download <i class="bi bi-download h5"></i></a>
+                        <a href="{% url 'article_app:article_download' article.id %}" class="text-dark FA">دانلود <i class="bi bi-download h5"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+
+    </main>
+{% endblock %}
+</body>
+
+
+</html>
