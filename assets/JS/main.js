@@ -1,7 +1,6 @@
 $(document).ready(function() {
     $(".projectType1").click(function() {
         $(".xicon1").toggleClass("hidden");
-        $(".office").toggleClass("nothidden");
     });
 
     $(".projectType2").click(function() {
@@ -53,21 +52,13 @@ $(document).ready(function() {
     });
 
     $('.projectType').click(function() {
-        var category = $(this).data('filter'); // Get the category from the data-filter attribute
+        var filterValue = $(this).data('filter');
 
-        // Remove the active class from all buttons
-        $('.projectType').removeClass('active');
-
-        // Add the active class to the clicked button
-        $(this).addClass('active');
-
-        // Show or hide the boxes based on the category
-        $('.container .row .col-md-4').each(function() {
-            if ($(this).hasClass(category)) {
-                $(this).show();
-            } else {
-                $(this).hide();
-            }
-        });
+        if (filterValue === 'all') {
+            $('.col-md-4').show();
+        } else {
+            $('.col-md-4').hide();
+            $('.' + filterValue).show();
+        }
     });
 });

@@ -18,6 +18,10 @@
     letter-spacing: 1px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .AJensonPro {
     font-family: "AJensonPro";
 }

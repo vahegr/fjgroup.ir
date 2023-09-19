@@ -13,6 +13,10 @@
     letter-spacing: 1px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #F6F6F6;
     overflow-x: hidden;

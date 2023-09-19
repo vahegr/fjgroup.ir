@@ -13,6 +13,10 @@
     src: url("../Fonts/teqh_iransansweb.ttf");
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #F6F6F6 !important;
 }
@@ -137,5 +141,9 @@ button {
 }
 
 #lang {
+    cursor: pointer;
+}
+
+a {
     cursor: pointer;
 }

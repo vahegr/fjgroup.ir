@@ -8,6 +8,7 @@ from django.template import defaultfilters
 class Content(models.Model):
     slug = models.SlugField(allow_unicode=True, blank=True, null=True)
     cover_image = models.ImageField(upload_to='images/content_images', verbose_name='عکس کاور')
+    second_cover_image = models.ImageField(upload_to='images/content_images', verbose_name='عکس کاور دوم', null=True)
     video = models.FileField(upload_to='videos/content_videos', blank=True, verbose_name='ویدیو')
     image = models.ImageField(upload_to='images/content_images', blank=True, verbose_name='عکس')
 

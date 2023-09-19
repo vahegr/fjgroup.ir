@@ -13,6 +13,10 @@
     src: url(../Fonts/teqh_iransansweb.ttf);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     font-family: "AvenirNext";
     letter-spacing: 1px;
