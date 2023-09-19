@@ -11,36 +11,36 @@
                             <a class="nav-link text-dark" id="lang">FA</a>
                         </li>
                         <li class="nav-item bg-transparent border-0 px-2 navitem">
-                            <a class="nav-link text-dark EN text-nowrap" href="#">Structure</a>
-                            <a class="nav-link text-dark FA text-nowrap" href="#">زیر ساخت</a>
+                            <a class="nav-link text-dark EN text-nowrap" href="{% url 'projects_app:structure' %}">Structure</a>
+                            <a class="nav-link text-dark FA text-nowrap" href="{% url 'projects_app:structure' %}">زیر ساخت</a>
                         </li>
                         <li class="nav-item bg-transparent border-0 px-2 navitem">
-                            <a class="nav-link text-dark EN" href="#">Interior</a>
-                            <a class="nav-link text-dark FA" href="#">داخلی</a>
+                            <a class="nav-link text-dark EN" href="{% url 'projects_app:interior' %}">Interior</a>
+                            <a class="nav-link text-dark FA" href="{% url 'projects_app:interior' %}">داخلی</a>
                         </li>
                         <li class="nav-item bg-transparent border-0 px-2 navitem">
-                            <a class="nav-link text-dark EN" href="#">Exterior</a>
-                            <a class="nav-link text-dark FA" href="#">بیرونی</a>
+                            <a class="nav-link text-dark EN" href="{% url 'projects_app:exterior' %}">Exterior</a>
+                            <a class="nav-link text-dark FA" href="{% url 'projects_app:exterior' %}">بیرونی</a>
                         </li>
                         <li class="nav-item bg-transparent border-0 px-2 navitem">
-                            <a class="nav-link text-dark EN" href="#">Objects</a>
-                            <a class="nav-link text-dark FA" href="#">شی</a>
+                            <a class="nav-link text-dark EN" href="{% url 'projects_app:objects' %}">Objects</a>
+                            <a class="nav-link text-dark FA" href="{% url 'projects_app:objects' %}">شی</a>
                         </li>
                         <li class="nav-item bg-transparent border-0 px-2 navitem">
-                            <a class="nav-link text-dark EN text-nowrap" href="#">Our Articles</a>
-                            <a class="nav-link text-dark FA text-nowrap" href="#">مقالات ما</a>
+                            <a class="nav-link text-dark EN text-nowrap" href="{% url 'article_app:articles' %}">Our Articles</a>
+                            <a class="nav-link text-dark FA text-nowrap" href="{% url 'article_app:articles' %}">مقالات ما</a>
                         </li>
                         <li class="nav-item bg-transparent border-0 px-2 navitem">
-                            <a class="nav-link text-dark EN" href="#">Content</a>
-                            <a class="nav-link text-dark FA" href="#">محتوا</a>
+                            <a class="nav-link text-dark EN" href="{% url 'content_app:content' %}">Content</a>
+                            <a class="nav-link text-dark FA" href="{% url 'content_app:content' %}">محتوا</a>
                         </li>
                         <li class="nav-item bg-transparent border-0 px-2 navitem">
-                            <a class="nav-link text-dark EN text-nowrap" href="#">Contact us</a>
-                            <a class="nav-link text-dark FA text-nowrap" href="#">ارتباط با ما</a>
+                            <a class="nav-link text-dark EN text-nowrap" href="{% url 'about_app:about' %}#Contactus">Contact us</a>
+                            <a class="nav-link text-dark FA text-nowrap" href="{% url 'about_app:about' %}#Contactus">ارتباط با ما</a>
                         </li>
                         <li class="nav-item bg-transparent border-0 px-2 navitem">
-                            <a class="nav-link text-dark EN text-nowrap" href="#">About us</a>
-                            <a class="nav-link text-dark FA text-nowrap" href="#">درباره ما</a>
+                            <a class="nav-link text-dark EN text-nowrap" href="{% url 'about_app:about' %}">About us</a>
+                            <a class="nav-link text-dark FA text-nowrap" href="{% url 'about_app:about' %}">درباره ما</a>
                         </li>
                     </ul>
                 </div>
