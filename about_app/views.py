@@ -1,11 +1,16 @@
 from django.shortcuts import render
 from django.http import FileResponse
 from .models import TeamMember
+from contact_app.models import ContactInformation
 
 
 def about_us(request):
     team_members = TeamMember.objects.all()
-    return render(request, 'about_app/AboutUs.html', context={'team_members': team_members})
+    contact_information = ContactInformation.objects.all()
+    return render(
+        request,
+        'about_app/AboutUs.html',
+        context={'team_members': team_members, 'contact': contact_information})
 
 
 def vita_download(request, id):

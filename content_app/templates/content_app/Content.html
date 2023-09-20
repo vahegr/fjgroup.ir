@@ -20,6 +20,7 @@
 {% include 'includes/header2.html' %}
     <main>
     {% for content in content %}
+        <a href="{{ content.get_absolute_url }}" style="text-decoration: none; color: black;">
         <div class="area pt-5 pb-5">
             <div class="container">
                 <div class="row justify-content-center">
@@ -37,8 +38,10 @@
                         <p class="w-75 lh-lg FA">{{ content.persian_description }}</p>
                     </div>
                 </div>
+
             </div>
         </div>
+        </a>
     {% endfor %}
 
     </main>

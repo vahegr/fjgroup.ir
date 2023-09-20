@@ -164,24 +164,20 @@
         <div class="container mt-5 mb-5 lh-lg w-75">
             <h2 class="mb-5 EN">Offices national & international</h2>
             <h2 class="mb-5 FA">دفاتر ملی و بین المللی</h2>
+            {% for item in contact %}
             <div id="ContactUs">
-                <h4 class="EN">Tehran</h4>
-                <h4 class="FA">تهران</h4>
-                <small class="d-block EN">Hadi Teherani</small>
-                <small class="d-block FA">هادی تهرانی</small>
-                <small class="d-block EN">Hampaye Building</small>
-                <small class="d-block FA">ساختمان همپایه</small>
-                <small class="d-block EN">No.22 Velenjak Av., 07th Street</small>
-                <small class="d-block FA">No.22 Velenjak Av., 07th Street</small>
-                <small class="d-block EN">08th Floor, Units 801 - 803</small>
-                <small class="d-block FA">08th Floor, Units 801 - 803</small>
-                <small class="d-block EN">1985834693 Tehran, Iran</small>
-                <small class="d-block FA">1985834693 Tehran, Iran</small>
-                <small class="d-block EN">Contact: Christoph Woop</small>
-                <small class="d-block FA">Contact: Christoph Woop</small>
-                <small class="d-block EN">Phone +98 910 209 2782</small>
-                <small class="d-block FA">Phone +98 910 209 2782</small>
+                <h4 class="EN">{{ item.location_title }}</h4>
+                <h4 class="FA">{{ item.persian_location_title }}</h4>
+                <small class="d-block EN">Fj Group</small>
+                <small class="d-block FA">گروه اف جی</small>
+                <small class="d-block EN">{{ item.location }}</small>
+                <small class="d-block FA">{{ item.persian_location }}</small>
+                <small class="d-block EN">Contact: {{ item.contact }}</small>
+                <small class="d-block FA">تماس:{{ item.persian_contact }}</small>
+                <small class="d-block EN">Phone {{ item.phone }} - {{ item.second_phone }}</small>
+                <small class="d-block FA">تلفن: {{ item.phone }} - {{ item.second_phone }}</small>
             </div>
+            {% endfor %}
         </div>
     </main>
 {% endblock %}
